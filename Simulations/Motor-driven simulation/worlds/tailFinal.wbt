@@ -1,0 +1,423 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/CircleArena.proto"
+
+WorldInfo {
+  basicTimeStep 8
+  defaultDamping Damping {
+  }
+}
+Viewpoint {
+  orientation -0.5773502691896258 0.5773502691896258 0.5773502691896258 2.0944
+  position -0.5082671944433222 -0.01494537743649116 10.682345143218436
+}
+TexturedBackground {
+  texture "empty_office"
+  skybox FALSE
+  skyColor [
+    1 1 1
+  ]
+}
+TexturedBackgroundLight {
+}
+Robot {
+  translation -1 0 0.50608
+  children [
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 0 1
+      }
+      device [
+        PositionSensor {
+          name "p2"
+        }
+        RotationalMotor {
+          name "Mbody"
+          controlPID 30 0 0
+          maxVelocity 20
+          minPosition -1.06
+          maxPosition 1.06
+          maxTorque 10000000
+        }
+      ]
+      endPoint Solid {
+        children [
+          Gyro {
+          }
+          DEF BASE Transform {
+            translation 0.490033 -0.0299991 -0.03
+            rotation 0 0 1 1.5708
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  baseColor 0.482353 0.52549 0.301961
+                  roughness 0.5
+                  metalness 0
+                }
+                geometry Mesh {
+                  url [
+                    "../../../Obj/Carapace v9.obj"
+                  ]
+                }
+              }
+            ]
+          }
+          DEF TAIL HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0 0 1
+              anchor 0.5 0 0
+              minStop -0.175
+              maxStop 0.175
+            }
+            device [
+              PositionSensor {
+                name "p0"
+              }
+              RotationalMotor {
+                name "M0"
+                maxVelocity 0
+                maxTorque 5000
+              }
+            ]
+            endPoint DEF V1 Solid {
+              translation 0.4899990615243316 -1.297834738300547e-07 -0.000731285969528428
+              children [
+                DEF R1 Transform {
+                  scale 0.001 0.001 0.001
+                  children [
+                    Shape {
+                      appearance PBRAppearance {
+                        baseColor 0.482353 0.52549 0.301961
+                        roughness 0.5
+                        metalness 0
+                      }
+                      geometry Mesh {
+                        url [
+                          "../../../Obj/cyl1 v2.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+                HingeJoint {
+                  jointParameters HingeJointParameters {
+                    axis 0 0 1
+                    anchor 0.11 0 0
+                    minStop -0.175
+                    maxStop 0.175
+                  }
+                  device [
+                    PositionSensor {
+                      name "p1"
+                    }
+                    RotationalMotor {
+                      name "M1"
+                      maxVelocity 0
+                      maxTorque 5000
+                    }
+                  ]
+                  endPoint DEF V2 Solid {
+                    translation 0.11000000000000001 -4.505267421195048e-20 0
+                    children [
+                      DEF R2 Transform {
+                        scale 0.001 0.001 0.001
+                        children [
+                          Shape {
+                            appearance PBRAppearance {
+                              baseColor 0.482353 0.52549 0.301961
+                              roughness 0.5
+                              metalness 0
+                            }
+                            geometry Mesh {
+                              url [
+                                "../../../Obj/cyl2 v2.obj"
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                      HingeJoint {
+                        jointParameters HingeJointParameters {
+                          axis 0 0 1
+                          anchor 0.11 0 0
+                          minStop -0.175
+                          maxStop 0.175
+                        }
+                        device [
+                          PositionSensor {
+                            name "p2"
+                          }
+                          RotationalMotor {
+                            name "M2"
+                            maxVelocity 0
+                            maxTorque 5000
+                          }
+                        ]
+                        endPoint DEF V3 Solid {
+                          translation 0.11 0 0
+                          children [
+                            Transform {
+                              children [
+                                DEF R3 Transform {
+                                  scale 0.001 0.001 0.001
+                                  children [
+                                    Shape {
+                                      appearance PBRAppearance {
+                                        baseColor 0.482353 0.52549 0.301961
+                                        roughness 0.5
+                                        metalness 0
+                                      }
+                                      geometry Mesh {
+                                        url [
+                                          "../../../Obj/cyl3 v2.obj"
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                            HingeJoint {
+                              jointParameters HingeJointParameters {
+                                axis 0 0 1
+                                anchor 0.11 0 0
+                                minStop -0.175
+                                maxStop 0.175
+                              }
+                              device [
+                                PositionSensor {
+                                  name "p3"
+                                }
+                                RotationalMotor {
+                                  name "M3"
+                                  maxVelocity 0
+                                  maxTorque 5000
+                                }
+                              ]
+                              endPoint DEF V4 Solid {
+                                translation 0.11 0 0
+                                children [
+                                  DEF R4 Group {
+                                    children [
+                                      Transform {
+                                        scale 0.001 0.001 0.001
+                                        children [
+                                          Shape {
+                                            appearance PBRAppearance {
+                                              baseColor 0.482353 0.52549 0.301961
+                                              roughness 0.5
+                                              metalness 0
+                                            }
+                                            geometry Mesh {
+                                              url [
+                                                "../../../Obj/cyl4 v2.obj"
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                  HingeJoint {
+                                    jointParameters HingeJointParameters {
+                                      axis 0 0 1
+                                      anchor 0.11 0 0
+                                      minStop -0.175
+                                      maxStop 0.175
+                                    }
+                                    device [
+                                      PositionSensor {
+                                        name "p4"
+                                      }
+                                      RotationalMotor {
+                                        name "M4"
+                                        maxVelocity 0
+                                        maxTorque 5000
+                                      }
+                                    ]
+                                    endPoint DEF V5 Solid {
+                                      translation 0.11 0 0
+                                      children [
+                                        DEF R5 Group {
+                                          children [
+                                            Transform {
+                                              scale 0.001 0.001 0.001
+                                              children [
+                                                Shape {
+                                                  appearance PBRAppearance {
+                                                    baseColor 0.482353 0.52549 0.301961
+                                                    roughness 0.5
+                                                    metalness 0
+                                                  }
+                                                  geometry Mesh {
+                                                    url [
+                                                      "../../../Obj/cyl5 v2.obj"
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                        HingeJoint {
+                                          jointParameters HingeJointParameters {
+                                            axis 0 0 1
+                                            anchor 0.11 0 0
+                                            minStop -0.175
+                                            maxStop 0.175
+                                          }
+                                          device [
+                                            PositionSensor {
+                                              name "p5"
+                                            }
+                                            RotationalMotor {
+                                              name "M5"
+                                              maxVelocity 0
+                                              maxTorque 5000
+                                            }
+                                          ]
+                                          endPoint DEF V6 Solid {
+                                            translation 0.11 0 0
+                                            children [
+                                              DEF R6 Transform {
+                                                scale 0.001 0.001 0.001
+                                                children [
+                                                  Shape {
+                                                    appearance PBRAppearance {
+                                                      baseColor 0.482353 0.52549 0.301961
+                                                      roughness 0.5
+                                                      metalness 0
+                                                    }
+                                                    geometry Mesh {
+                                                      url [
+                                                        "../../../Obj/cyl6 v3.obj"
+                                                      ]
+                                                    }
+                                                  }
+                                                ]
+                                              }
+                                              HingeJoint {
+                                                jointParameters HingeJointParameters {
+                                                  position 0.1298029250598979
+                                                  axis 0 0 1
+                                                  anchor 0.11 0 0
+                                                  minStop -0.175
+                                                  maxStop 0.175
+                                                }
+                                                device [
+                                                  PositionSensor {
+                                                    name "p6"
+                                                  }
+                                                  RotationalMotor {
+                                                    name "M6"
+                                                    maxVelocity 0
+                                                    maxTorque 5000
+                                                  }
+                                                ]
+                                                endPoint DEF Club Solid {
+                                                  translation 0.619067098544335 0.0014975473441865422 -0.010502247076735973
+                                                  rotation -0.0013768865171685663 -2.6577839266705503e-05 -0.9999990517381191 3.141595057686325
+                                                  children [
+                                                    DEF CLUB Transform {
+                                                      scale 0.001 0.001 0.001
+                                                      children [
+                                                        Shape {
+                                                          appearance PBRAppearance {
+                                                            baseColor 0.482353 0.52549 0.301961
+                                                            roughness 0.5
+                                                            metalness 0
+                                                          }
+                                                          geometry Mesh {
+                                                            url [
+                                                              "../../../Obj/Club doedicurus_final_version_full_size.obj"
+                                                            ]
+                                                          }
+                                                        }
+                                                      ]
+                                                    }
+                                                    GPS {
+                                                      translation -0.3 -0.15 -0.01
+                                                      name "gpsTip"
+                                                    }
+                                                    GPS {
+                                                      translation 0.000408 -0.0063533 -0.0062339
+                                                      name "gpsClub"
+                                                    }
+                                                  ]
+                                                  name "CLub"
+                                                  boundingObject USE CLUB
+                                                  physics Physics {
+                                                    density 1800
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                            name "solid(1)"
+                                            boundingObject USE R6
+                                            physics Physics {
+                                              density 1373.33
+                                            }
+                                          }
+                                        }
+                                      ]
+                                      name "solid(1)"
+                                      boundingObject USE R5
+                                      physics Physics {
+                                        density 1373.33
+                                      }
+                                    }
+                                  }
+                                ]
+                                name "solid(1)"
+                                boundingObject USE R4
+                                physics Physics {
+                                  density 1373.33
+                                }
+                              }
+                            }
+                          ]
+                          name "solid(1)"
+                          boundingObject USE R3
+                          physics Physics {
+                            density 1373.33
+                          }
+                        }
+                      }
+                    ]
+                    name "solid(1)"
+                    boundingObject USE R2
+                    physics Physics {
+                      density 1373.33
+                    }
+                  }
+                }
+              ]
+              name "solid(1)"
+              boundingObject USE R1
+              physics Physics {
+                density 1373.33
+              }
+            }
+          }
+        ]
+        boundingObject USE BASE
+        physics Physics {
+          density -1
+          mass 1250
+          centerOfMass [
+            0.48405611540898486 -1.4321750654025238 0.6630946571944316
+          ]
+        }
+      }
+    }
+  ]
+  name "tail"
+  controller "tail_controller"
+  supervisor TRUE
+}
+CircleArena {
+  translation -0.65 0 0
+  radius 2.1
+}

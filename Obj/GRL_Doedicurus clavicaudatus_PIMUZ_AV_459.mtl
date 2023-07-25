@@ -1,0 +1,28 @@
+#
+# Wrap
+#
+# Materials for the file "GRL_Doedicurus clavicaudatus_PIMUZ_AV_459.obj"
+#
+
+
+newmtl default
+   illum 1
+   d 1
+   Ns 6
+   sharpness 60
+   Ni 1
+
+newmtl material_0
+   Ka 1.000000000000 1.000000000000 1.000000000000
+   Kd 1.000000000000 1.000000000000 1.000000000000
+   illum 1
+   d 1
+   Ns 1000
+   sharpness 60
+   Ni 1
+   map_Kd_wrapU Repeat
+   map_Kd_wrapV Repeat
+   map_Kd_magFilter Linear
+   map_Kd GRL_Doedicurus_clavicaudatus_PIMUZ_AV_459material_0.png
+
+# end of file
